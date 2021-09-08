@@ -1,0 +1,2 @@
+echo "My Hostname is: `uname -n`" >> myfile.html
+echo "<img src=\"sample.png\"/>" >> myfile.html

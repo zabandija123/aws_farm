@@ -1,0 +1,12 @@
+#!/bin/bash
+# get ec2 instance ready
+yum update -y
+yum install httpd.x86_64 -y
+# prep the magical web
+aws s3 cp s3://static-zabandija-content/sample.png /var/www/html/
+echo "My Hostname is: `uname -n`" >> /var/www/html/index.html
+echo "<hr/>" >> /var/www/html/index.html
+echo "<img src=\"sample.png\"/>" >> /var/www/html/index.html
+# service up
+systemctl enable httpd.service
+systemctl start httpd.service

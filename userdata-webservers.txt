@@ -1,0 +1,6 @@
+#!/bin/bash
+yum update -y
+yum install httpd.x86_64 -y
+echo "My Hostname is: `uname -n`" >> /var/www/html/index.html
+systemctl enable httpd.service
+systemctl start httpd.service

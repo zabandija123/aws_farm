@@ -1,0 +1,6 @@
+# ec2 instance create
+# necesitas: subnetid, sg-ids, userdata_script, 
+
+
+# s3 
+aws s3 mb $BUCKET
